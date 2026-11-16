@@ -9,7 +9,7 @@ for(const p of required) if(!fs.existsSync(path.join(root,p))) errors.push('Miss
 if(errors.length){console.error(errors.join('\n'));process.exit(1);}
 const version=read('VERSION').trim();
 if(!/^\d+\.\d+\.\d+$/.test(version))errors.push('Invalid VERSION');
-if(!read('CHANGELOG.md').includes('## '+version+' ��'))errors.push('Version missing in changelog');
+if(!read('CHANGELOG.md').includes('## '+version+' —'))errors.push('Version missing in changelog');
 if(!read('README.md').includes(version))errors.push('README version drift');
 const skillPath='skills/robot-learning-paper-reading/SKILL.md';
 const skill=read(skillPath);
