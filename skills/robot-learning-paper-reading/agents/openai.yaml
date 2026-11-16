@@ -1,0 +1,4 @@
+interface:
+  display_name: "Robot Learning Paper Reading"
+  short_description: "Evidence-grounded robot learning paper explanations"
+  default_prompt: "Use $robot-learning-paper-reading to explain this paper's mechanism, evidence, and reading priorities."
