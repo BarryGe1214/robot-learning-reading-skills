@@ -42,6 +42,13 @@ For theory, inspect assumptions and proof scope rather than forcing success-rate
 Use current user context conditionally; never force every paper into the user's hypothesis. Separate transferable ideas from directly deployable methods, and confirm observation, action, timing and data requirements before claiming applicability.
 Search external work only when needed to resolve a material question or requested novelty comparison. Do not call a method first, SOTA or absent from prior work without appropriate verification. Label unavailable comparisons.
 
+
+## Self-contained evidence presentation
+Make the initial interpretation understandable before the reader opens the paper. Put decisive source content next to the explanation: use a short exact quotation with a Chinese explanation, an essential equation with local definitions, or verified experimental values with their conditions. Section/figure references are navigation aids, not substitutes for evidence. Select only evidence needed for the main mechanism and 1-3 decisive claims; do not turn the answer into an excerpt collection.
+Distinguish verbatim original text, translated/paraphrased source content, and your inference. Never label a paraphrase or translation as a verbatim original quotation. Follow applicable quotation limits. For user-provided papers, use focused excerpts rather than reproducing large portions.
+When a figure is decisive, display an inspected original figure or readable crop if available, then explain the relevant axes, controls and supported conclusion. Label a reformatted data table as a reconstruction from reported values, retain metric definitions, sample sizes and conditions, and do not present it as the original figure. Never invent or estimate unreadable values. If images cannot be accessed or displayed, disclose that gap and use verified text/captions; do not claim visual inspection. Do not require every answer to contain an image.
+Use a running example to connect the evidence to training and deployment. Put the optional original-paper reading route after the standalone explanation. For a focused follow-up, provide only the local evidence needed to answer it. Record the actual skill commit or local revision and source scope.
+
 ## Deliver
 Start with the main insight, then mechanism, strongest evidence/boundaries and specific reading guidance. Usually fit an initial answer into a 1–3 minute read; expand when requested. For focused questions answer them first.
 Tell the reader which section/figure/equation to read and what question it answers. Avoid automatic chapter summaries, numerical ratings, research roadmaps and permanent note creation.
