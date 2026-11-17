@@ -1,6 +1,8 @@
 # Changelog
 
 ## Unreleased
+- Add explicit uploaded-PDF figure extraction and visual verification workflow; record access-stage failures and local-only review scope.
+- Add original-figure-access case and manual evaluation record; full independent suite and successful image delivery remain not_run.
 - 初读改为可独立理解的证据导读：关键原文、公式或验证过的数据紧邻解释；保留出处与实验条件。
 - 区分原文、译述、推断、原图与重排表格；图像不可访问时明确降级，不编造数值。
 - 增加 self-contained-evidence 合成用例；本地审阅中，未发布。
