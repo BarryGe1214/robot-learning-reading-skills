@@ -1,6 +1,7 @@
 # Changelog
 
 ## Unreleased
+- Add a causal guided-reading narrative: a running example and mapped analogy precede equations, with experiments testing the proposed intuition and secondary audit details kept out of the main thread.
 - Default whole-paper readings to illustrated delivery, preserve the requirement across follow-ups, and separate code exclusion from figure coverage.
 - Require final-report render checks and original-image explanation in the final response; captions, tool images and link-only responses do not pass the delivery gate.
 - Add explicit uploaded-PDF figure extraction and visual verification workflow; record access-stage failures and local-only review scope.

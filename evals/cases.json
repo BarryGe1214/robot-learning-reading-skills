@@ -111,5 +111,16 @@
       "Do not count tool images or captions as delivered evidence",
       "Fix and inspect the actual deliverable before claiming completion"
     ]
+  },
+  {
+    "id": "causal-guided-reading",
+    "prompt": "Write a guided reading from this synthetic paper: a policy previously predicted all future reference targets together; the proposed policy retains its last target and repeatedly applies a learned local update, supervised by the resulting short path. Observations are refreshed once per chunk. An experiment shows faster early learning, but there is no stability proof. Help me understand the central change before discussing the evidence.",
+    "rubric": [
+      "Open with a concrete situation and explain the operational change before equations",
+      "Use a coherent example or analogy with explicit mapping to reference commands, measured state and observation timing",
+      "Explain why training and error recovery questions follow from the mechanism",
+      "Do not imply that continuous commands guarantee stability or every-step feedback",
+      "Do not caricature the baseline as necessarily discontinuous or replace precise explanation with metaphor"
+    ]
   }
 ]

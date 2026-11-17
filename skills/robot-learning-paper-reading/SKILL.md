@@ -24,6 +24,7 @@ Explain operations rather than module branding. Treat claimed contributions as h
 Record unresolved questions. Do not silently downgrade an explicit deep-reading request because the first pass suggests limited value.
 
 ## Pass 2: Reconstruct the mechanism
+For a guided reading, load [narrative-guide](references/narrative-guide.md). Build a causal explanation around one concrete problem before organizing modules or auditing results. Use an analogy when it clarifies the paper's specific change; map it back to the actual variables and state where it stops applying. Do not make the reader reconstruct the main idea from a sequence of caveats.
 Trace training and inference separately. Explain the purpose, input, operation, output, dependencies and claimed benefit of decisive modules. For key equations explain the question, symbols/dimensions, operation, intuition, assumptions and implementation effect. Do not fabricate omitted derivations.
 
 Use one running task/sample when useful. Prefer the paper's example; clearly label invented teaching examples and toy values. Include shapes, pseudocode or diagrams only when they resolve confusion. A counterfactual about removing a component is inference unless supported by evidence.
