@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="380" viewBox="0 0 960 380">
+<rect width="960" height="380" fill="white"/>
+<g font-family="Arial,sans-serif" fill="#18283a"><text x="30" y="38" font-size="23">Figure 1. Command construction (synthetic original)</text>
+<rect x="260" y="70" width="660" height="245" rx="12" fill="#f3f6fa" stroke="#8293a6" stroke-dasharray="7 5"/>
+<text x="280" y="103" font-size="18">One chunk: observation held fixed</text>
+<g font-size="18"><text x="30" y="157">Image + measured state</text><text x="30" y="249">Previous target</text></g>
+<g fill="white" stroke="#315a85" stroke-width="2"><rect x="310" y="130" width="210" height="65" rx="8"/><rect x="590" y="130" width="285" height="65" rx="8"/><rect x="590" y="225" width="285" height="55" rx="8"/></g>
+<g font-size="18" text-anchor="middle"><text x="415" y="168">Local update network</text><text x="732" y="168">Accumulate target increments</text><text x="732" y="259">Four reference targets</text></g>
+<g fill="none" stroke="#315a85" stroke-width="3"><path d="M238 151H300m-12 -7 12 7 -12 7 M525 161H580m-12 -7 12 7 -12 7 M215 243H555V185H580m-12 -7 12 7 -12 7 M733 196V217m-7 -12 7 12 7 -12"/></g>
+<text x="30" y="350" font-size="18">Execute first two targets; reobserve and replan. Reference target is not measured state.</text></g></svg>

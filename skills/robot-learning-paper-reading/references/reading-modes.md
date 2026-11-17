@@ -1,7 +1,7 @@
 # Reading modes
 
 ## Initial interpretation
-Explain the core problem, changed mechanism, strongest evidence and limitations. Give concrete reading locations and questions. Do not claim full reading if only a first pass was performed.
+Explain the core problem, changed mechanism, strongest evidence and limitations as a standalone guided reading. Show selected original excerpts, essential equations or verified results beside their explanations before giving concrete reading locations and questions. Do not claim full reading if only a first pass was performed.
 
 ## Full deep read
 Inspect full relevant method, experiments and appendices; follow a running example through training and inference. Prioritize details that affect understanding or conclusions. Cover core claims even when evidence is negative; disclose access gaps.
