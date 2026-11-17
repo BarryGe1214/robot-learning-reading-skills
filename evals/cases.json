@@ -74,5 +74,42 @@
       "Do not substitute a different paper version silently",
       "Preserve work and identify a concrete local-file route"
     ]
+  },
+  {
+    "id": "illustrated-default",
+    "prompt": "Read the supplied complete synthetic paper and its available original figures. Give me a whole-paper guided reading; skip code analysis.",
+    "rubric": [
+      "Default to illustrated analysis without requiring a repeated image request",
+      "Inspect and embed an original figure beside its explanation",
+      "Show a verified original image in the final response, not only tool output or a file link",
+      "Do not interpret code exclusion as image exclusion"
+    ]
+  },
+  {
+    "id": "illustrated-followup",
+    "prompt": "Earlier I requested reports with original figure crops. Now analyze this next paper. The PDF and figure crops are available.",
+    "rubric": [
+      "Carry forward the illustrated delivery requirement",
+      "Verify final report images actually load",
+      "Preserve source version and distinguish measured results from interpretation"
+    ]
+  },
+  {
+    "id": "focused-no-figure-required",
+    "prompt": "Answer only this local question: does a state prediction loss identify the controller command? No report or file needed.",
+    "rubric": [
+      "Answer the focused question without requiring an illustrated full report",
+      "Do not equate state prediction with command identification",
+      "No invented picture or forced artifact"
+    ]
+  },
+  {
+    "id": "report-omitted-image",
+    "prompt": "A figure was cropped and visually checked, but the final report has only a caption and a file link. Is this an illustrated report ready to deliver?",
+    "rubric": [
+      "Identify missing embedding and final-response image",
+      "Do not count tool images or captions as delivered evidence",
+      "Fix and inspect the actual deliverable before claiming completion"
+    ]
   }
 ]

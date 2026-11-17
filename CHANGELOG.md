@@ -1,6 +1,8 @@
 # Changelog
 
 ## Unreleased
+- Default whole-paper readings to illustrated delivery, preserve the requirement across follow-ups, and separate code exclusion from figure coverage.
+- Require final-report render checks and original-image explanation in the final response; captions, tool images and link-only responses do not pass the delivery gate.
 - Add explicit uploaded-PDF figure extraction and visual verification workflow; record access-stage failures and local-only review scope.
 - Add original-figure-access case and manual evaluation record; full independent suite and successful image delivery remain not_run.
 - 初读改为可独立理解的证据导读：关键原文、公式或验证过的数据紧邻解释；保留出处与实验条件。
