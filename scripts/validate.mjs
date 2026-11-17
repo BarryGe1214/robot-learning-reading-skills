@@ -4,11 +4,17 @@ import {fileURLToPath} from 'node:url';
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const errors=[];
 const read=p=>fs.readFileSync(path.join(root,p),'utf8');
-const required=['README.md','GOVERNANCE.md','AGENTS.md','CONTRIBUTING.md','CHANGELOG.md','VERSION','LICENSE','ACKNOWLEDGEMENTS.md','evals/cases.json','evals/RESULTS.md','skills/robot-learning-paper-reading/SKILL.md','skills/robot-learning-paper-reading/agents/openai.yaml'];
+const packageRoot='skills/robot-learning-paper-reading/';
+const required=['README.md','GOVERNANCE.md','AGENTS.md','CONTRIBUTING.md','CHANGELOG.md','VERSION','LICENSE','ACKNOWLEDGEMENTS.md','evals/cases.json','evals/RESULTS.md',...['SKILL.md','agents/openai.yaml','LICENSE','ATTRIBUTION.md','VERSION','references/runtime-and-delivery.md','references/reuse-and-privacy.md','references/report-tools.md'].map(p=>packageRoot+p)];
 for(const p of required) if(!fs.existsSync(path.join(root,p))) errors.push('Missing '+p);
 if(errors.length){console.error(errors.join('\n'));process.exit(1);}
 const version=read('VERSION').trim();
-if(!/^\d+\.\d+\.\d+$/.test(version))errors.push('Invalid VERSION');
+if(!/^\d+\.\d+\.\d+(?:-[0-9A-Za-z]+(?:[.-][0-9A-Za-z]+)*)?$/.test(version))errors.push('Invalid VERSION');
+if(read(packageRoot+'VERSION').trim()!==version)errors.push('Packaged VERSION drift');
+if(read(packageRoot+'LICENSE')!==read('LICENSE'))errors.push('Packaged LICENSE drift');
+for(const p of ['third-party/techdou-paper-reading/LICENSE','third-party/techdou-paper-reading/NOTICE.md']){
+if(!fs.existsSync(path.join(root,packageRoot,p)))errors.push('Missing accompanying third-party notice '+p);
+}
 if(!read('CHANGELOG.md').includes('## '+version+' —'))errors.push('Version missing in changelog');
 if(!read('README.md').includes(version))errors.push('README version drift');
 const skillPath='skills/robot-learning-paper-reading/SKILL.md';
@@ -46,6 +52,10 @@ const seen=new Set();
 for(const c of cases){
 if(!c.id||seen.has(c.id)||typeof c.prompt!=='string'||!Array.isArray(c.rubric)||!c.rubric.length)errors.push('Invalid/duplicate eval case '+c.id);
 seen.add(c.id);
+for(const input of c.input_files||[]){
+const p=path.resolve(root,input);
+if(!p.startsWith(root+path.sep)||!fs.existsSync(p))errors.push('Missing/escaping eval input '+input);
+}
 }
 if(cases.length<6)errors.push('Missing regression coverage');
 }catch(e){errors.push('Invalid cases JSON: '+e.message);}

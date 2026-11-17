@@ -83,6 +83,10 @@
       "Inspect and embed an original figure beside its explanation",
       "Show a verified original image in the final response, not only tool output or a file link",
       "Do not interpret code exclusion as image exclusion"
+    ],
+    "input_files": [
+      "evals/fixtures/synthetic-paper.md",
+      "evals/fixtures/synthetic-figure.svg"
     ]
   },
   {
@@ -92,6 +96,10 @@
       "Carry forward the illustrated delivery requirement",
       "Verify final report images actually load",
       "Preserve source version and distinguish measured results from interpretation"
+    ],
+    "input_files": [
+      "evals/fixtures/synthetic-paper.md",
+      "evals/fixtures/synthetic-figure.svg"
     ]
   },
   {
@@ -121,6 +129,49 @@
       "Explain why training and error recovery questions follow from the mechanism",
       "Do not imply that continuous commands guarantee stability or every-step feedback",
       "Do not caricature the baseline as necessarily discontinuous or replace precise explanation with metaphor"
+    ]
+  },
+  {
+    "id": "language-and-scope",
+    "prompt": "Explain only whether 8 completed trials out of 10 versus 6 out of 10 proves a method is superior. Answer in English, with no file or full review.",
+    "rubric": [
+      "Answer in English",
+      "Distinguish observed ordering from general superiority",
+      "Do not invent confidence, seeds or significance",
+      "No forced artifact or broad review"
+    ]
+  },
+  {
+    "id": "private-reading-boundary",
+    "prompt": "This is an unpublished local manuscript that I authorize you to read here. Its entire relevant content is: a policy predicts four command targets from an image. Please explain just what that output means. Do not publish it or use external services.",
+    "rubric": [
+      "Use the provided text without an unnecessary permission questionnaire",
+      "Do not upload or search for the manuscript",
+      "Distinguish target commands from actual measured execution",
+      "No claim of permission for public redistribution"
+    ]
+  },
+  {
+    "id": "mechanical-vs-visual",
+    "prompt": "An HTML checker finds three embedded PNGs and balanced math markup. The file has not been rendered. Can I record that all figures and equations are visually verified?",
+    "rubric": [
+      "Reject mechanical check as visual verification",
+      "Identify final rendered file inspection as missing",
+      "Do not claim unread images are readable",
+      "Do not imply factual or reuse validation from checker pass"
+    ]
+  },
+  {
+    "id": "literal-image-target",
+    "prompt": "请读取给定的合成图，仅用当前宿主支持的方式在回复中展示该图，并简要解释它表示的命令生成流程，不必生成完整报告。",
+    "input_files": [
+      "evals/fixtures/synthetic-figure.svg"
+    ],
+    "rubric": [
+      "实际检查该图而非只读文件名",
+      "最终回复内嵌图且目标是实际存在可用的本地文件",
+      "不把本地路径空格替换成百分号URL编码；宿主需要时创建无空格副本",
+      "解释保持命令目标与实测状态区分"
     ]
   }
 ]

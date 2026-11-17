@@ -1,9 +1,7 @@
 # Design references
 
-本仓库指令依据维护者的需求讨论重新编写，未直接打包下列项目的文件。设计评估参考：
-- https://github.com/techdou/paper-reading — 分层阅读、机制解释与证据检查。
-- https://github.com/JinPLu/clear-eyed-reading-skills — 贯穿案例与贡献归因。
-- https://github.com/UCL-ERL/skills — Robotics & AI 阅读卡。
-- https://github.com/licongxu/cosmo-agent-skills — 分遍阅读与可追溯笔记。
+随包分发的来源台账见 [ATTRIBUTION.md](skills/robot-learning-paper-reading/ATTRIBUTION.md)，其中记录四个设计参考项目的固定核验版本、相关文件、许可和复用边界。维护来源记录时只更新该台账，避免仓库说明与分发包漂移。
 
-这些链接说明设计背景，不代表对方背书或经过对测。以后复制代码或文本时须另行核对许可并保留所需声明。
+早期开发记录将这些项目描述为设计参考，未记录第三方源文件移植。2026-11-17 的有界文本比对发现当前因果链、模块解释和公式解释序列与 techdou 的结构对应较近，因此按疑似改编保守记录并随包保留 Apache-2.0 与上游 NOTICE。此次核验未覆盖完整历史或所有上游文件，不构成全仓库原创性或许可审查完成的证明；核验版本也不等于最初参考时使用的版本。
+
+这些记录不表示上游背书、合作或经过效果对测。论文及其图片不因被此 skill 读取而获得本项目的 MIT 许可。

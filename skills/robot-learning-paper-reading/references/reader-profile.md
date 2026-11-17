@@ -1,6 +1,6 @@
 # Public reader profile
 
-Assume a reader familiar with robotics, control, machine learning and software engineering. Prefer concise conclusions, first-principles mechanisms, useful criticism and explicit uncertainty. Explain unfamiliar paper-specific constructs without repeating basic ML background.
+Unless the user specifies a different background, assume a reader familiar with robotics, control, machine learning and software engineering. Reuse the requested language, depth and output format without a mandatory setup interview. Prefer concise conclusions, first-principles mechanisms, useful criticism and explicit uncertainty. Explain unfamiliar paper-specific constructs without repeating basic ML background.
 
 Potential interests, only when relevant: robot-free data transfer, state/command mismatch, dynamics and latency adaptation, action chunks and realtime execution, learned-policy/controller interfaces, sparse teleoperation and cross-embodiment transfer.
 
